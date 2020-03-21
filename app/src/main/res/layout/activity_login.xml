@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+        <TextView
+            android:id="@+id/sin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:textSize="25dp"
+            android:textColor="#54abee"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp"
+            />
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vous avez déjà un compte?"
+            android:textSize="16dp"
+            android:textColor="#c4c5c9"
+            android:gravity="center"
+            android:layout_above="@id/sin"
+            android:paddingBottom="16dp"
+            />
+        <LinearLayout
+            android:id="@+id/circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circleangle"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="140dp"
+            >
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="1dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/angle2"
+                    />
+
+            </FrameLayout>
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="S'inscrire gratuitement"
+                android:textSize="22dp"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
