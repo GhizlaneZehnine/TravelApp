@@ -98,6 +98,8 @@ public class Accueil extends AppCompatActivity {
                                            Intent i2 = new Intent(Accueil.this, MapActivity.class);
                                              startActivity(i2);
                                             }    break;
+                        case 3 :  Intent plans = new Intent(Accueil.this, Plans.class);
+                            startActivity(plans); break;
                         default: Intent intent = new Intent(Accueil.this, ActivityOne.class);
                                  intent.putExtra("info", "This is activity from card item index  " + finalI);
                                  startActivity(intent);break;

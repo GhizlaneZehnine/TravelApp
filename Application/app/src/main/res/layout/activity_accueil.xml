@@ -8,10 +8,6 @@
     android:background="@drawable/bg"
     tools:context=".Accueil">
 
-
-
-
-
         <RelativeLayout
 
             android:layout_weight="2"
@@ -19,6 +15,9 @@
             android:layout_height="0dp">
 
             <TextView
+                android:contentDescription="Nos services"
+                android:focusable="true"
+                android:nextFocusForward="@id/translation"
                 android:id="@+id/textGrid"
                 android:text="NOS SERVICES"
                 android:textSize="34sp"
@@ -45,6 +44,12 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:focusable="true"
+                android:nextFocusForward="@id/device_converter"
+                android:nextFocusRight="@id/device_converter"
+                android:nextFocusDown="@id/carte"
+                android:background="@drawable/trad"
+                android:contentDescription="Traduction"
                 android:id="@+id/translation"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -63,20 +68,24 @@
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
+
                     <ImageView
+                        android:focusable="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/ic_translate" />
 
+
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Traduction"
                         android:textAlignment="center"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                 </LinearLayout>
 
@@ -84,6 +93,11 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:focusable="true"
+                android:nextFocusForward="@id/carte"
+                android:nextFocusLeft="@id/translation"
+                android:nextFocusDown="@id/plans"
+                android:contentDescription="Echange de monnaie"
                 android:id="@+id/device_converter"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -126,6 +140,12 @@
 
             <!-- Column 1 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/carte"
+                android:focusable="true"
+                android:nextFocusUp="@id/translation"
+                android:nextFocusRight="@id/plans"
+                android:nextFocusForward="@id/plans"
+                android:contentDescription="La carte"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"
@@ -165,6 +185,11 @@
 
             <!-- Column 2 -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/plans"
+                android:focusable="true"
+                android:nextFocusUp="@id/device_converter"
+                android:nextFocusLeft="@id/carte"
+                android:contentDescription="Les plans à proximité"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_columnWeight="1"

@@ -45,8 +45,9 @@
     </RelativeLayout>
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:contentDescription="Retour à ma position"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_below="@id/relLayout1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"

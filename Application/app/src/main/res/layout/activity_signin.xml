@@ -14,14 +14,15 @@
             android:orientation="horizontal"
             android:layout_marginTop="37dp"
             android:layout_marginLeft="30dp">
+
             <ImageView
                 android:id="@+id/sinb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/left"
-                android:padding="10dp"
                 android:layout_gravity="center"
-                />
+                android:contentDescription="Retour"
+                android:padding="20dp"
+                android:src="@drawable/left" />
         </LinearLayout>
 
         <LinearLayout
@@ -31,7 +32,7 @@
             android:layout_alignParentBottom="true">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
@@ -52,7 +53,7 @@
                 android:layout_height="1dp"
                 android:background="#ADCCE2" />
             <EditText
-                android:id="@+id/password2"
+                android:id="@+id/password"
                 android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,13 +75,14 @@
                 android:layout_marginBottom="10dp"
                 android:background="#ADCCE2"/>
             <TextView
+                android:contentDescription="connexion"
                 android:id="@+id/sin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/angle"
                 android:text="Se connecter"
                 android:textSize="16dp"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:gravity="center"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"

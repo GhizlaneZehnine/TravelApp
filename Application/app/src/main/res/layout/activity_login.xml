@@ -9,11 +9,15 @@
         android:layout_height="match_parent"
         android:background="@drawable/background">
         <TextView
+            android:padding="20dp"
+            android:contentDescription="se connecter"
+            android:focusable="true"
+            android:screenReaderFocusable="true"
             android:id="@+id/sin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Se connecter"
-            android:textSize="25dp"
+            android:textSize="35dp"
             android:textColor="#54abee"
             android:gravity="center"
             android:layout_alignParentBottom="true"
@@ -31,6 +35,10 @@
             android:paddingBottom="16dp"
             />
         <LinearLayout
+            android:contentDescription="inscription gratuite"
+            android:screenReaderFocusable="true"
+            android:focusable="true"
+            android:nextFocusForward="@id/sin"
             android:id="@+id/circle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="S'inscrire gratuitement"
                 android:textSize="22dp"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:layout_gravity="center"
                 android:layout_marginLeft="16dp"/>
         </LinearLayout>
