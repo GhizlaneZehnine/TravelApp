@@ -116,7 +116,7 @@ public class Accueil extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     switch(finalI){
-                        case 0 : Intent i_trans = new Intent(Accueil.this,Translation_Model.class);
+                        case 0 : Intent i_trans = new Intent(Accueil.this,Translation_Activity.class);
                                   startActivity(i_trans); break;
                         case 1 :  Intent i = new Intent(Accueil.this, Devise_Converter.class);
                                   startActivity(i); break;

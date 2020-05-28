@@ -18,7 +18,7 @@
         <activity android:name=".About" />
         <activity android:name=".Chatbot" />
         <activity android:name=".Plans" />
-        <activity android:name=".Translation_Model" />
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -29,7 +29,8 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
+        <activity android:name=".News_Activity"/>
+        <activity android:name=".NewsDetailActivity"/>
         <activity android:name=".Translation_Activity" />
         <activity android:name=".Devise_Converter" />
         <activity android:name=".ActivityOne" />
@@ -50,3 +51,4 @@
     </application>
 
 </manifest>
+

@@ -59,7 +59,7 @@ public class About extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent it = new Intent(About.this,About.class);
+                Intent it = new Intent(About.this,News_Activity.class);
                 startActivity(it);
 
             }
