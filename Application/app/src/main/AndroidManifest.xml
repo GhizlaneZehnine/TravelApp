@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Plans"></activity>
+        <activity android:name=".Setting"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".Chatbot" />
+        <activity android:name=".Plans" />
         <activity android:name=".Translation_Model" />
 
         <meta-data
@@ -30,15 +33,18 @@
         <activity android:name=".Translation_Activity" />
         <activity android:name=".Devise_Converter" />
         <activity android:name=".ActivityOne" />
-        <activity android:name=".Accueil" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Signin" />
-        <activity android:name=".Login">
+        <activity android:name=".Accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".WeatherActivity" />
+        <activity android:name=".Signup" />
+        <activity android:name=".Signin" />
+        <activity android:name=".Login">
+
         </activity>
         <activity android:name=".MapActivity" />
     </application>

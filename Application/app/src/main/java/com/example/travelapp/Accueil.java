@@ -1,22 +1,22 @@
 package com.example.travelapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
-import android.accessibilityservice.AccessibilityService;
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Accueil extends AppCompatActivity {
 
@@ -33,6 +33,32 @@ public class Accueil extends AppCompatActivity {
         //Set Event
         setSingleEvent(mainGrid);
         //setToggleEvent(mainGrid);
+
+        // Bottom navigation bar
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(),About.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.configuration:
+                        startActivity(new Intent(getApplicationContext(), Setting.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.home:
+                         return true;
+                }
+                return false;
+            }
+        });
+
+
     }
 
     private void setToggleEvent(GridLayout mainGrid) {
