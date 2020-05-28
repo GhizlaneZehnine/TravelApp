@@ -127,7 +127,10 @@
                 android:padding="16dp"
                 android:text="Créer"
                 android:textColor="#000"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:onClick="onClick"
+                android:clickable="true"
+                />
         </LinearLayout>
     </RelativeLayout>
 </FrameLayout>
