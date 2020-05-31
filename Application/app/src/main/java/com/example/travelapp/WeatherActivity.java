@@ -47,7 +47,7 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
         // you can paste your city "latitude" and "longitude" here
-        asyncTask.execute("33.816098", "-6.060638"); //  asyncTask.execute("Latitude", "Longitude")
+        asyncTask.execute("51.5", "10.5"); //  asyncTask.execute("Latitude", "Longitude")
 
 
 
