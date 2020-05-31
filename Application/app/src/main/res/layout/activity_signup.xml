@@ -78,7 +78,7 @@
                 android:layout_marginRight="35dp"
                 android:background="#0000"
                 android:hint="Mot de passe"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:padding="16dp"
                 android:textColor="#ADCCE2"
                 android:textColorHint="#ADCCE2"

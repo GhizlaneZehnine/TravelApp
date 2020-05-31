@@ -46,10 +46,6 @@ public class Signup extends AppCompatActivity {
         passwrod2 = findViewById(R.id.password2);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
-        if(fAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(),Accueil.class));
-            finish();
-        }
         sin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +76,7 @@ public class Signup extends AppCompatActivity {
                 if(s_password.length()<6){
                     password.setError("Password must be >= 6 characters");
                 }
+                System.out.println("Password:"+s_password);
                 fAuth.createUserWithEmailAndPassword(s_email,s_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -101,7 +98,7 @@ public class Signup extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: " + e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(),Accueil.class));
+                            startActivity(new Intent(getApplicationContext(),Signin.class));
 
                         }else {
                             Toast.makeText(Signup.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

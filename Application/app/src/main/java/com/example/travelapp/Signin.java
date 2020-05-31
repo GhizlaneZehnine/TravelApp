@@ -65,7 +65,6 @@ public class Signin extends AppCompatActivity {
                             Toast.makeText(Signin.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
-
                     }
                 });
             }
