@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +23,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAnOIPKBgtPxygJKA1Ui1QpVDhlF2mUTMo" />
+            android:value="AIzaSyC7vC4v5akYbhwo7Vdw5MgDJb9lKyD1F5Y"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -48,6 +49,7 @@
 
         </activity>
         <activity android:name=".MapActivity" />
+        <activity android:name=".MapsActivity" />
     </application>
 
 </manifest>

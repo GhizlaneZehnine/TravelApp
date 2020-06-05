@@ -1,6 +1,7 @@
 package com.example.travelapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,13 +61,24 @@ public class PlansAdapter extends RecyclerView.Adapter<PlansAdapter.ViewHolder>{
 
         ImageView item_image;
         TextView item_name, item_description;
+        Context context;
 
         public ViewHolder(View itemView){
 
             super(itemView);
+            context = itemView.getContext();
             item_image = itemView.findViewById(R.id.item_image);
             item_name = itemView.findViewById(R.id.item_name);
             item_description = itemView.findViewById(R.id.item_description);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, MapsActivity.class);
+                    intent.putExtra("name",item_name.getText().toString());
+
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
