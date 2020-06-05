@@ -1,5 +1,7 @@
 package com.example.travelapp;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
@@ -9,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WeatherActivity extends AppCompatActivity {
 
-
+    SharedPreferences sharedPref;
 
     TextView cityField, detailsField, currentTemperatureField, humidity_field, pressure_field, weatherIcon, updatedField;
 
@@ -19,7 +21,7 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
-
+        sharedPref = getSharedPreferences("ville", Context.MODE_PRIVATE);
 
         weatherFont = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/weathericons-regular-webfont.ttf");
 
@@ -47,7 +49,7 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
         // you can paste your city "latitude" and "longitude" here
-        asyncTask.execute("51.5", "10.5"); //  asyncTask.execute("Latitude", "Longitude")
+        asyncTask.execute(String.valueOf(sharedPref.getFloat("latitude",0)), String.valueOf(sharedPref.getFloat("longitude",0))); //  asyncTask.execute("Latitude", "Longitude")
 
 
 
