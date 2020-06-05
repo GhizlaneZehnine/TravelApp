@@ -33,31 +33,31 @@
             android:src="@drawable/ic_magnify"/>
 
         <EditText
+            android:id="@+id/input_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
             android:layout_toRightOf="@+id/ic_magnify"
-            android:layout_centerVertical="true"
-            android:textSize="15sp"
-            android:textColor="#000"
-            android:id="@+id/input_search"
             android:background="@null"
-            android:hint="Enter Address, City or Zip Code"
+            android:hint="Choisissez une ville pour plus d'informations"
             android:imeOptions="actionSearch"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/ic_gps"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/relLayout1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-49dp"
+            android:layout_marginRight="305dp"
+            android:contentDescription="Retour à ma position"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_gps" />
 
     </RelativeLayout>
-
-    <ImageView
-        android:contentDescription="Retour à ma position"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/relLayout1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/ic_gps"
-        android:src="@drawable/ic_gps"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

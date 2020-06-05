@@ -90,7 +90,7 @@ public class Setting extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Choisissez une ville pour plus d'informations sur sa méteo et ses news", Toast.LENGTH_SHORT).show();
         Log.d(TAG,"onMapReady: map is ready");
         mMap = googleMap;
 
@@ -102,7 +102,7 @@ public class Setting extends AppCompatActivity implements OnMapReadyCallback {
             }
             mMap.setMyLocationEnabled(true);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
-            mMap.getUiSettings().setZoomControlsEnabled(true);
+            mMap.getUiSettings().setZoomControlsEnabled(false);
 
             init();
         }
