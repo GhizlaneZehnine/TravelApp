@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
@@ -33,10 +35,12 @@ public class News_Activity extends AppCompatActivity {
     private List<Article> articles = new ArrayList<>();
     private News_Adapter adapter;
     private String TAG = News_Activity.class.getSimpleName();
+    SharedPreferences sharedPref1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+        sharedPref1 = getSharedPreferences("country", Context.MODE_PRIVATE);
         recyclerView = findViewById(R.id.recyclerView);
         layoutManager = new LinearLayoutManager(News_Activity.this);
         recyclerView.setLayoutManager(layoutManager);
@@ -47,7 +51,8 @@ public class News_Activity extends AppCompatActivity {
     }
     public void LoadJSon(){
         ApiInterface_News apiInterface_news = ApiClient_News.getApiClient_News().create(ApiInterface_News.class);
-        String country = Utils.getCountry();
+        //String country = Utils.getCountry();
+        String country = sharedPref1.getString("country_name","");
         String language = Utils.getLanguage();
         Call<News> call;
         call = apiInterface_news.getNews(country,API_KEY);

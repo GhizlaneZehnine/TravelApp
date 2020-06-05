@@ -44,8 +44,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Setting extends AppCompatActivity implements OnMapReadyCallback {
-    DatabaseReference reff;
-    SharedPreferences sharedPref;
+    DatabaseReference reff,reff1;
+    SharedPreferences sharedPref,sharedPref1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,9 @@ public class Setting extends AppCompatActivity implements OnMapReadyCallback {
         mGps = (ImageView) findViewById(R.id.ic_gps);
         getLocaionPermission();
         reff = FirebaseDatabase.getInstance().getReference().child("Ville");
+        reff1 = FirebaseDatabase.getInstance().getReference().child("Country");
         sharedPref = getSharedPreferences("ville", Context.MODE_PRIVATE);
+        sharedPref1 = getSharedPreferences("country", Context.MODE_PRIVATE);
 //        SharedPreferences.Editor editor = sharedPref.edit();
 //        editor.putBoolean("configure",true);
 //        editor.putString("nomVille","paris");
@@ -167,15 +169,21 @@ public class Setting extends AppCompatActivity implements OnMapReadyCallback {
         if (list.size() > 0) {
             /*enregistrement dans la BD firebas*/
             Address address = list.get(0);
+            String country = address.getCountryCode();
+            reff1.setValue(country);
             Ville ville = new Ville();
             ville.setLatitude(address.getLatitude());
             ville.setLongitude(address.getLongitude());
             reff.push().setValue(ville);
             Toast.makeText(Setting.this,"Ville enregistrée", Toast.LENGTH_LONG).show();
+
             /*fin*/
 
             /*ecriture dans les variables globales*/
             SharedPreferences.Editor editor = sharedPref.edit();
+            SharedPreferences.Editor editor1 = sharedPref1.edit();
+            editor1.putString("country_name",country);
+            editor1.commit();
             editor.putBoolean("configure",true);
             editor.putString("nomVille",searchString);
             editor.putFloat("latitude", Float.valueOf(String.valueOf(address.getLatitude())));
