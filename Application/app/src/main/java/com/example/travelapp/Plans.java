@@ -22,7 +22,7 @@ public class Plans extends AppCompatActivity {
 
         plansList.add(new ModelPlans(R.drawable.restaurant, "Restaurants", "Les meilleurs restaurants de la ville"));
         plansList.add(new ModelPlans(R.drawable.monument, "Monuments", "Les monuments à voir!"));
-        plansList.add(new ModelPlans(R.drawable.bus, "Stations de bus/tram", "Les plus proches stations de transports"));
+        plansList.add(new ModelPlans(R.drawable.bus, "Stations de transports", "Les plus proches stations de transports"));
         plansList.add(new ModelPlans(R.drawable.hopital, "Hôpitaux", "Les hôpitaux à proximité"));
         plansList.add(new ModelPlans(R.drawable.bank, "Banques", "Les banques à proximité"));
         plansList.add(new ModelPlans(R.drawable.mosque, "Mosqués", "Les mosqués à proximité"));
